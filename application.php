@@ -16,7 +16,7 @@ if(get('action') == 'login') {
 
   $params = array(
     'client_id' => OAUTH2_CLIENT_ID,
-    'redirect_uri' => 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'],
+    'redirect_uri' => 'http://calendar.eeta.gg/application.php',
     'scope' => 'user',
     'state' => $_SESSION['state']
   );
