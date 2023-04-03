@@ -1,5 +1,7 @@
 <?php
 
+require_once "secrets.php";
+
 $authorizeURL = 'https://github.com/login/oauth/authorize';
 $tokenURL = 'https://github.com/login/oauth/access_token';
 $apiURLBase = 'https://api.github.com/';
