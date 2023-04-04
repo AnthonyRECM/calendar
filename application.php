@@ -83,7 +83,7 @@ if(session('access_token')) {
   echo '<h3>Not logged in</h3>';
   echo '<p><a href="?action=login">Log In</a></p>';
 }*/
-header('Location: http://calendar.eeta.gg/')
+header('Location: http://calendar.eeta.gg/');
 
 # main function for curl requests
 function apiRequest($url, $post=FALSE, $headers=array()) {
