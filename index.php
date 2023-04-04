@@ -19,11 +19,11 @@
             if(session('access_token'))
             {
                 $user = apiRequest($apiURLBase.'user');
-                echo '<a href=""><img src="';
+                echo '<span style="position: absolute; float: right;"><a href=""><img src="';
                 echo $user->avatar_url;
                 echo '" width="30px"> ';
                 echo $user->login;
-                echo '</a>';
+                echo '</a></span>';
             
             } else {
             echo '<a href="/application.php?action=login">Login with GitHub</a>'; 
