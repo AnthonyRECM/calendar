@@ -19,7 +19,7 @@
             if(session('access_token'))
             {
                 $user = apiRequest($apiURLBase.'user');
-                echo '<span style="position: absolute; float: right;"><a href=""><img src="';
+                echo '<span><a href=""><img src="';
                 echo $user->avatar_url;
                 echo '" width="30px"> ';
                 echo $user->login;
