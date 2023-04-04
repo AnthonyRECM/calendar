@@ -56,7 +56,7 @@ if(get('code')) {
 
   header('Location: ' . $_SERVER['PHP_SELF']);
 }
-
+/*
 # if successful show results
 if(session('access_token')) {
   $user = apiRequest($apiURLBase.'user');
@@ -82,7 +82,8 @@ if(session('access_token')) {
 # fail result if no session token
   echo '<h3>Not logged in</h3>';
   echo '<p><a href="?action=login">Log In</a></p>';
-}
+}*/
+header('Location: http://calendar.eeta.gg/')
 
 # main function for curl requests
 function apiRequest($url, $post=FALSE, $headers=array()) {

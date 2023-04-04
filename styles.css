@@ -1,0 +1,7 @@
+nav {
+    position: relative;
+    top: 0px;
+}
+.profile_span {
+    position: absolute;right: 5px;top: -15px;
+}
