@@ -25,7 +25,7 @@
             echo '<span class="profile_span"><a href=""><img src="';
             echo $user->avatar_url;
             echo '" width="30px" style="position: relative;top: 10px;"> ';
-            echo $user->login;
+            echo $user->name;
             echo '</a></span>';
         } else {
             echo '<a href="/application.php?action=login">Login with GitHub</a>';
