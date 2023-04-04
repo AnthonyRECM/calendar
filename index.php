@@ -11,6 +11,7 @@
 
 <body>
     <?php
+    use Vtiful\Kernel\Format;
     session_start();
 
     require_once 'secrets.php';
@@ -32,7 +33,7 @@
         ?>
     </nav>
     <?php
-        $selected_date = new DateTime();
+        $selected_date = new DateTime()->format('d/m/Y'); 
     ?>
     <div class="container">
         <div class="Calendar" style="display:grid;grid-template-columns: repeat(7, 1fr);">
