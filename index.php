@@ -8,6 +8,8 @@
 </head>
 <body>
     <?php
+        session_start();
+
         require_once 'secrets.php';
         require_once 'api.php';
     ?>
