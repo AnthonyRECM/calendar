@@ -21,7 +21,7 @@
                 $user = apiRequest($apiURLBase.'user');
                 echo '<a href=""><img src="';
                 echo $user->avatar_url;
-                echo '" width="20px"> ';
+                echo '" width="25px"> ';
                 echo $user->login;
                 echo '</a>';
             
