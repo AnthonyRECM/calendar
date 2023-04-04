@@ -11,7 +11,6 @@
 
 <body>
     <?php
-    use Vtiful\Kernel\Format;
     session_start();
 
     require_once 'secrets.php';
@@ -22,7 +21,7 @@
         <?php
         if (session('access_token')) {
             $user = apiRequest($apiURLBase . 'user');
-            echo '<span class="profile_span"><a href=""><img src="';
+            echo '<span class="profile_span"><a href="/profile.php"><img src="';
             echo $user->avatar_url;
             echo '" width="30px" style="position: relative;top: 10px;"> ';
             echo $user->name;
