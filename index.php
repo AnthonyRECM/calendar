@@ -7,9 +7,26 @@
     <title>Calendar</title>
 </head>
 <body>
+    <?php
+        require_once 'secrets.php';
+        require_once 'api.php';
+    ?>
     <nav>
         <a href="#">Calendar</a>
-        <a href="/application.php">Login with GitHub</a>
+        <?php 
+            if(session('access_token'))
+            {
+                $user = apiRequest($apiURLBase.'user');
+                echo '<a href=""><img src="';
+                echo $user->avatar_url;
+                echo '" width="40px"> ';
+                echo $user->login;
+                echo '</a>';
+            
+            } else {
+            echo '<a href="/application.php?action=login">Login with GitHub</a>'; 
+            }
+        ?>
     </nav>
 </body>
 </html>
