@@ -5,3 +5,18 @@ nav {
 .profile_span {
     position: absolute;right: 5px;top: -15px;
 }
+.container {  display: grid;
+    grid-template-columns: 0.2fr 2.7fr 0.1fr;
+    grid-template-rows: 0.1fr 2.8fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      "Values Calendar ."
+      ". . .";
+  }
+  
+  .Calendar { grid-area: Calendar; }
+  
+  .Values { grid-area: Values; }
+  
