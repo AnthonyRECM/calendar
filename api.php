@@ -1,5 +1,10 @@
 <?php
 
+# URL of github api
+$authorizeURL = 'https://github.com/login/oauth/authorize';
+$tokenURL = 'https://github.com/login/oauth/access_token';
+$apiURLBase = 'https://api.github.com/';
+
 # main function for curl requests
 function apiRequest($url, $post=FALSE, $headers=array()) {
     $ch = curl_init($url);
