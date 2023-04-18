@@ -24,7 +24,7 @@ if ($stmt = mysqli_prepare($link, $sql)) {
     mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_avatar);
 
     // Set parameters
-    $param_username = $username;
+    $param_username = $user->login;
     $param_avatar = $user->avatar_url;
 
 
