@@ -33,7 +33,7 @@ if(get('action') == 'exit') {
     unset($_SESSION['state']);
     unset($_SESSION['access_token']);
     session_destroy();
-    exit();
+    header('Location: http://calendar.eeta.gg/');
 }
 
 // When Github redirects the user back here, there will be a "code" and "state" parameter in the query string

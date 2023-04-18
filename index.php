@@ -32,6 +32,11 @@
         ?>
     </nav>
     <?php
+        if(session('access_token')) {
+            
+        }
+    ?>
+    <?php
         $selected_date = new DateTime();//->format('d/m/Y'); 
     ?>
     <div class="container">
