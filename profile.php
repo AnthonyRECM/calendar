@@ -34,9 +34,11 @@
     <a href="/application.php?action=exit">logout</a>
     </div>
     <div>
+        <pre>
         <?php
             print_r($user);
         ?>
+        </pre>
     </div>
 </body>
 </html>
