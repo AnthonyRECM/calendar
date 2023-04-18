@@ -17,7 +17,7 @@
     require_once 'api.php';
     ?>
     <nav>
-        <a href="#">Calendar</a>
+        <a href="/">Calendar</a>
         <?php
         if (session('access_token')) {
             $user = apiRequest($apiURLBase . 'user');
