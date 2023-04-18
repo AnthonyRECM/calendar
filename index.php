@@ -68,6 +68,7 @@
     <?php
         $selected_date = 0;//new DateTime();//->format('d/m/Y'); 
     ?>
+    <a href="/new.php">New Event</a>
     <div class="container">
         <div class="Calendar" style="display:grid;grid-template-columns: repeat(7, 1fr);">
             <div>
