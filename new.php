@@ -37,7 +37,14 @@
     <?php
         $selected_date = new DateTime();//->format('d/m/Y'); 
     ?>
-    new event
+    <a href="/"><-</a>
+    <br>
+    <form action="/upload_event.php" method="post">
+        Date: <input type="datetime" name="time" id="time">
+        <br>
+        Duration: <input type="text" name="duration" id="duration">
+        <input type="submit" value="submit">
+    </form>
 </body>
 <?php
 function weekday($weekday, $date) {

@@ -33,5 +33,10 @@
     </nav>
     <a href="/application.php?action=exit">logout</a>
     </div>
+    <div>
+        <?php
+            print_r($user);
+        ?>
+    </div>
 </body>
 </html>
