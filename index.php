@@ -55,7 +55,8 @@
                     if (mysqli_stmt_fetch($stmt)) {
                     }
                 } else {
-                    echo '<h1>This user could not be found?</h1>';
+                    header('Location: http://calendar.eeta.gg/create_db_entry.php');
+                    //echo '<h1>This user could not be found?</h1>';
                 }
             }
         }
