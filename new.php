@@ -40,7 +40,9 @@
     <a href="/"><-</a>
     <br>
     <form action="/upload_event.php" method="post">
-        Date: <input type="datetime" name="time" id="time">
+        Date: <input type="date" name="time" id="time">
+        <br>
+        Starttime: <input type="text" name="starttime" id="starttime">
         <br>
         Duration: <input type="text" name="duration" id="duration">
         <input type="submit" value="submit">
