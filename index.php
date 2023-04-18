@@ -17,7 +17,7 @@
     require_once 'api.php';
     ?>
     <nav>
-        <a href="#">Calendar</a>
+        <a href="/">Calendar</a>
         <?php
         if (session('access_token')) {
             $user = apiRequest($apiURLBase . 'user');
@@ -32,8 +32,36 @@
         ?>
     </nav>
     <?php
-        if(session('access_token')) {
+        if(isset($user)) {
             
+            $sql = "SELECT id, avatar, created_at FROM users WHERE log_in = ?";
+
+        if ($stmt = mysqli_prepare($link, $sql)) {
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_username);
+
+            // Set parameters
+            $param_username = $user->login;
+
+            // Attempt to execute the prepared statement
+            if (mysqli_stmt_execute($stmt)) {
+                // Store result
+                mysqli_stmt_store_result($stmt);
+
+                // Check if username exists, if yes then verify password
+                if (mysqli_stmt_num_rows($stmt) == 1) {
+                    // Bind result variables
+                    mysqli_stmt_bind_result($stmt, $id, $avatar, $created_at);
+                    if (mysqli_stmt_fetch($stmt)) {
+                    }
+                } else {
+                    echo '<h1>This user could not be found?</h1>';
+                }
+            }
+        }
+
+        } else {
+            echo "<h1>You're not logged in, <a href='/application.php?action=login'>Login with GitHub</a> </h1>";
         }
     ?>
     <?php
