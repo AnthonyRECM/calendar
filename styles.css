@@ -2,22 +2,48 @@ nav {
     position: relative;
     top: 0px;
 }
+
 .profile_span {
-    position: absolute;right: 5px;top: -15px;
+    position: absolute;
+    right: 5px;
+    top: -15px;
 }
-.container {  display: grid;
+
+.container {
+    display: grid;
     grid-template-columns: 0.2fr 2.7fr 0.1fr;
     grid-template-rows: 0.1fr 2.8fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      ". . ."
-      "Values Calendar ."
-      ". . .";
-  }
-  
-  .Calendar { grid-area: Calendar; }
-  
-  .Values { grid-area: Values; }
-  
-  .Time {grid-area: Time;}
+        ". . ."
+        "Values Calendar ."
+        ". . .";
+}
+
+.Calendar {
+    grid-area: Calendar;
+}
+
+.Values {
+    grid-area: Values;
+}
+
+.Time {
+    grid-area: Time;
+}
+
+ul {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid #c2c2c2;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+li {
+    text-align: center;
+    display: table-row;
+    background: pink;
+}

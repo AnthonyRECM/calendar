@@ -32,9 +32,9 @@
         ?>
     </nav>
     <?php
-        if(isset($user)) {
-            
-            $sql = "SELECT id, avatar, created_at FROM users WHERE log_in = ?";
+    if (isset($user)) {
+
+        $sql = "SELECT id, avatar, created_at FROM users WHERE log_in = ?";
 
         if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
@@ -60,48 +60,74 @@
                 }
             }
         }
-
-        } else {
-            echo "<h1>You're not logged in, <a href='/application.php?action=login'>Login with GitHub</a> </h1>";
-        }
+    } else {
+        echo "<h1>You're not logged in, <a href='/application.php?action=login'>Login with GitHub</a> </h1>";
+    }
     ?>
     <?php
-        $selected_date = 0;//new DateTime();//->format('d/m/Y'); 
+    $selected_date = 0; //new DateTime();//->format('d/m/Y'); 
     ?>
     <a href="/new.php">New Event</a>
     <div class="container">
         <div class="Calendar" style="display:grid;grid-template-columns: repeat(7, 1fr);">
             <div>
-                <?php weekday('Sunday',$selected_date) ?> 
+                <?php weekday('Sunday', $selected_date) ?>
             </div>
             <div>
-                <?php weekday('Monday',$selected_date) ?>
+                <?php weekday('Monday', $selected_date) ?>
             </div>
             <div>
-                <?php weekday('Tuesday',$selected_date) ?>
+                <?php weekday('Tuesday', $selected_date) ?>
             </div>
             <div>
-                <?php weekday('Wednesday',$selected_date) ?>
+                <?php weekday('Wednesday', $selected_date) ?>
             </div>
             <div>
-                <?php weekday('Thursday',$selected_date) ?>
+                <?php weekday('Thursday', $selected_date) ?>
             </div>
             <div>
-                <?php weekday('Friday',$selected_date) ?>
+                <?php weekday('Friday', $selected_date) ?>
             </div>
             <div>
-                <?php weekday('Saturday',$selected_date) ?>
+                <?php weekday('Saturday', $selected_date) ?>
             </div>
         </div>
         <div class="Values">
             <br>
-            <?php echo $selected_date ?></div>
-        <div class="Time"></div>
-    </div>
+            <ul>
+                <li><span>00:00</span></li>
+                <li><span>01:00</span></li>
+                <li><span>02:00</span></li>
+                <li><span>03:00</span></li>
+                <li><span>04:00</span></li>
+                <li><span>05:00</span></li>
+                <li><span>06:00</span></li>
+                <li><span>07:00</span></li>
+                <li><span>08:00</span></li>
+                <li><span>09:00</span></li>
+                <li><span>10:00</span></li>
+                <li><span>11:00</span></li>
+                <li><span>12:00</span></li>
+                <li><span>13:00</span></li>
+                <li><span>14:00</span></li>
+                <li><span>15:00</span></li>
+                <li><span>16:00</span></li>
+                <li><span>17:00</span></li>
+                <li><span>18:00</span></li>
+                <li><span>19:00</span></li>
+                <li><span>20:00</span></li>
+                <li><span>21:00</span></li>
+                <li><span>22:00</span></li>
+                <li><span>23:00</span></li>
+            </ul>
+            <div class="Time"></div>
+        </div>
 </body>
 <?php
-function weekday($weekday, $date) {
+function weekday($weekday, $date)
+{
     echo $weekday;
 }
 ?>
+
 </html>
