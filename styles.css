@@ -27,6 +27,7 @@ nav {
 
 .Values {
     grid-area: Values;
+    height: 100%;
 }
 
 .Time {
@@ -37,7 +38,7 @@ ul {
     display: table;
     table-layout: fixed;
     width: 100%;
-    border: 1px solid #c2c2c2;
+    border: 1px solid;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -45,5 +46,4 @@ ul {
 li {
     text-align: center;
     display: table-row;
-    background: pink;
 }
