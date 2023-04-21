@@ -19,6 +19,8 @@ nav {
         ". . ."
         "Values Calendar ."
         ". . .";
+    position: absolute;
+    height: 100%;
 }
 
 .Calendar {
@@ -37,8 +39,6 @@ nav {
 ul {
     display: table;
     table-layout: fixed;
-    width: 100%;
-    border: 1px solid;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
